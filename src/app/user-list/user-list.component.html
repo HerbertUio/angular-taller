@@ -1,1 +1,69 @@
-<p>user-list works!</p>
+<!-- user-list.component.html -->
+<div class="container">
+  <div *ngFor="let user of users" class="user-group">
+    <!-- Tabla de Usuario -->
+    <div class="table-container">
+      <h3>Usuario: {{ user.id }}</h3>
+      <table class="user-table">
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Contraseña</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ user.email }}</td>
+            <td>{{ user.password }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Tabla de Perfil -->
+    <div class="table-container">
+      <h4>Perfil Asociado</h4>
+      <table class="profile-table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Género</th>
+            <th>Fecha Nacimiento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ user.profile.name }}</td>
+            <td>{{ user.profile.lastName }}</td>
+            <td>{{ user.profile.gender | genderTransform }}</td>
+            <td>{{ user.profile.birthday | date:'dd/MM/yyyy' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Tabla de Cuentas -->
+    <div class="table-container">
+      <h4>Cuentas Bancarias</h4>
+      <table class="account-table">
+        <thead>
+          <tr>
+            <th>Número de Cuenta</th>
+            <th>Tipo de Moneda</th>
+            <th>Saldo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let account of user.account">
+            <td>{{ account.number }}</td>
+            <td>{{ account.currencyType }}</td>
+            <td>{{ account.balance | currency }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="separator"></div>
+  </div>
+</div>

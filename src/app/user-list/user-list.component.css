@@ -1,0 +1,53 @@
+/* user-list.component.css */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.user-group {
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.table-container {
+  margin: 1rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+th {
+  background-color: #e9ecef;
+}
+
+.user-table th { background-color: #cfe2ff; }
+.profile-table th { background-color: #fff3cd; }
+.account-table th { background-color: #d1e7dd; }
+
+.separator {
+  border-bottom: 2px solid #000000;
+  margin: 1.5rem 0;
+}
+
+h3 {
+  color: #000000;
+  margin: 1rem 0;
+}
+
+h4 {
+  color: #6c757d;
+  margin: 0.5rem 0;
+}
