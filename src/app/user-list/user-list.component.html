@@ -1,5 +1,6 @@
 <!-- user-list.component.html -->
 <div class="container">
+  <h1>Clientes VIP</h1>
   <div *ngFor="let user of users" class="user-group">
     <!-- Tabla de Usuario -->
     <div class="table-container">
@@ -64,6 +65,10 @@
       </table>
     </div>
 
+
     <div class="separator"></div>
+  </div>
+  <div>
+    <button routerLink="new">Guardar</button>
   </div>
 </div>

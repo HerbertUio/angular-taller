@@ -1,6 +1,7 @@
 import { Component, inject, OnInit, Pipe, PipeTransform } from '@angular/core';
 import { UserService } from '../service/service.component';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 
 
@@ -14,7 +15,7 @@ export class GenderTransformPipe implements PipeTransform {
 @Component({
   selector: 'app-user-list',
   standalone: true,
-  imports: [CommonModule, GenderTransformPipe],
+  imports: [CommonModule, GenderTransformPipe, RouterLink],
   templateUrl: './user-list.component.html',
   styleUrl: './user-list.component.css'
 })
@@ -27,8 +28,6 @@ export class UserListComponent implements OnInit  {
     }
     );
   }
-
   users: any[] = [];
   userService = inject(UserService);
-
 }
